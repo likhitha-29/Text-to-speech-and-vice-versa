@@ -1,0 +1,58 @@
+<html>
+<head>
+   <title>Speech to text</title>
+   <style>
+      h1 {
+         color:brown;
+         text-align: center;
+      }
+      button {
+         height: 20px;
+         border-radius: 50%;
+      }
+      .center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+      img {
+         size: 1px;
+      }
+      p,h3 {
+         text-align: center;
+      }
+   </style>
+</head>
+   <body>
+      <h1>Record your speech</h1>
+      <div class="speaker" style="display: flex;justify-content: space-between;width: 13rem;box-shadow: 0 0 13px #0000003d;border-radius: 5px;">
+         <p id="action" style="color: grey;font-weight: 800; padding: 0; padding-left: 2rem;"></p>
+         <div class="center">
+         <button onclick="runSpeechRecog()" style="border: transparent;padding: 0 0.5rem;">
+            <img src="E:\mc2.jpg"/>
+         </button></div>
+      </div>
+      <h3 id="output" class="hide"></h3>
+      <script>
+         runSpeechRecog = () => {
+            document.getElementById("output").innerHTML = "Loading text...";
+            var output = document.getElementById('output');
+            var action = document.getElementById('action');
+            let recognization = new webkitSpeechRecognition();
+            recognization.onstart = () => {
+               action.innerHTML = "Listening...";
+            }
+            recognization.onresult = (e) => {
+               var transcript = e.results[0][0].transcript;
+               output.innerHTML = transcript;
+               output.classList.remove("hide")
+               action.innerHTML = "";
+            }
+            recognization.start();
+         }
+      </script>
+   </body>
+</html>

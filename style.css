@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+    color:rgb(122, 8, 8);
+  }
+  
+  textarea {
+    width: 75%;
+    height: 200px;
+    margin-bottom: 10px;
+    background-color: bisque;
+    align-self: center;
+    margin: 0 auto;
+    display:block;
+    border-radius: 20px;
+  }
+  
+  button {
+    display: block;
+    margin: 0 auto;
+    height:40px;
+  }
+  .b1{
+    color: black;
+    background-color: aqua;
+    border-radius:10px ;
+  }
+  .b2 {
+    color:aliceblue;
+    background-color: brown;
+    border-radius:10px ;
+
+  }
