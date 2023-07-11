@@ -1,0 +1,2 @@
+# Text-to-speech-and-vice-versa
+The goal of this project is to develop a text-to-speech (TTS) converter and a speech-to-text (STT) converter, enabling users to convert written text into natural-sounding speech and spoken words into written text. The project aims to utilize advanced natural language processing (NLP) and speech recognition techniques to provide accurate and high-quality conversion between text and speech.
